@@ -18,7 +18,7 @@ size_t mergeModified(T* arr1, size_t len1, T* arr2, size_t len2)
 			result[resultCursor++] = arr1[cursor1++];
 		else
 		{
-			inversionCount += (len1 - cursor1 + 1);
+			inversionCount += (len1 - cursor1);
 			result[resultCursor++] = arr2[cursor2++];
 		}
 	}

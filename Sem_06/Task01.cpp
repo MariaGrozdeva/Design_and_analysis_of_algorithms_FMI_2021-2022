@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 template <class T>
 void merge(T* arr1, size_t len1, T* arr2, size_t len2, T* res)
