@@ -20,10 +20,13 @@ bool formATriangle(std::vector<double> arr)
 			return true;
 		}
 	}
+
+	return false;
 }
 
 int main()
 {
 	std::vector<double> arr = { 2.5, 1, 11, 3.6, 8 };
-	formATriangle(arr);
+	if (!formATriangle(arr))
+		std::cout << "No such triangle!" << std::endl;
 }

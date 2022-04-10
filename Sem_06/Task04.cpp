@@ -31,5 +31,6 @@ bool findPair(std::vector<int>& arr, int K)
 int main()
 {
     std::vector<int> arr = { 8, 7, 2, 5, 3, 1 };
-    findPair(arr, 10);
+    if (!findPair(arr, 10))
+        std::cout << "No such pair!" << std::endl;
 }
