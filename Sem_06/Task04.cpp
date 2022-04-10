@@ -24,6 +24,8 @@ bool findPair(std::vector<int>& arr, int K)
 
         (arr[l] + arr[h] < K) ? l++ : h--;
     }
+    
+    return false;
 }
 
 int main()
