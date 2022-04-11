@@ -58,5 +58,5 @@ minOperations(n) = 1 + min{ minOperations(n-1), minOperations(n/2), minOperation
 
 DP[0...n]:  
 DP[i] - минималният брой операции, с които можем да получим числото i.  
-DP[i] = 1 + min{ DP[n-1], DP[i/2] (ако i е четно), DP[i/3] (ако i се дели на 3)  
+DP[i] = 1 + min{ DP[n-1], DP[i/2] (ако i е четно), DP[i/3] (ако i се дели на 3) }
 Резултатът ще се пази в DP[n].  
