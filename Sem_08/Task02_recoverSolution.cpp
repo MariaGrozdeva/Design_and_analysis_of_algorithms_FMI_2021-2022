@@ -34,8 +34,8 @@ void printSolution(const std::vector<size_t>& paintingPrices, const std::vector<
 size_t theft(const std::vector<size_t>& paintingsPrices)
 {
 	std::vector<size_t> maxProfits(paintingsPrices.size()); // We don't need to keep track of all n max profits. 
-															// We only need to keep the last three elements (maxProfits[k-2], maxProfits[k-1], maxProfits[k]).
-															// Thus we optimise the spatial complexity from O(n) to O(1).
+								// We only need to keep the last three elements (maxProfits[k-2], maxProfits[k-1], maxProfits[k]).
+								// Thus we optimise the spatial complexity from O(n) to O(1).
 
 	maxProfits[0] = paintingsPrices[0];
 	maxProfits[1] = std::max(maxProfits[0], maxProfits[1]);
