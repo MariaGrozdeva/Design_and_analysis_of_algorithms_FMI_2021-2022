@@ -7,8 +7,8 @@ int maxSum(const std::vector<int>& A, const std::vector<int>& B, const std::vect
 	std::vector<std::vector<int>> maxSums;
 	for (size_t i = 0; i < 3; i++)
 		maxSums.push_back(std::vector<int>(2)); // We don't need to keep track of all n columns.
-	                                            // We only need to keep the last two columns.
-	                                            // Thus we optimise the spatial complexity from O(n) to O(1).
+	                                                // We only need to keep the last two columns.
+	                                                // Thus we optimise the spatial complexity from O(n) to O(1).
 
 	maxSums[0][0] = A[0];
 	maxSums[1][0] = B[0];
