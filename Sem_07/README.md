@@ -10,7 +10,7 @@
 
 Второ възможно решение е да сортираме масива за време O(nlgn), a после да търсим първото липсващо число за линейно време:
 
-![alt_text](https://i.ibb.co/JqVrfKx/first-Missing-Number-Naive.png)
+![alt_text](https://i.ibb.co/tZLCr2r/first-Missing-Number-Naive.png)
 
 **Времевата сложност на този алгоритъм е O(nlgn) + O(n) = O(nlgn)**, което е по-добре от предишния алгоритъм, но все още не е най-бързо.  
 
