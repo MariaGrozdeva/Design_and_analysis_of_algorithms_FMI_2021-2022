@@ -24,11 +24,9 @@ private:
 	bool oriented;
 
 public:
-
 	Graph(size_t verticesCount, bool oriented);
 	void addEdge(size_t start, size_t end, int weight);
 
-public:
 	void Dijkstra(size_t start, std::vector<size_t>& distances) const; // O((n+m)*lgn)
 	void BellmanFord(size_t start, std::vector<int>& distances) const; // O(n*(n+m))
 	void FloydWarshall(std::vector<std::vector<int>>& distances) const; // O(n^3)
