@@ -33,7 +33,7 @@ size_t minimumSwapsNeededForBalancing(std::string& str)
 		if (count < 0)
 		{
 			int nextOpeningBracketIndFromI = getNextOpeningBracketIndex(str.c_str() + i);
-		    assert(nextOpeningBracketIndFromI > 0);
+		    	assert(nextOpeningBracketIndFromI > 0);
 		    
 			result += nextOpeningBracketIndFromI;		    
 			std::swap(str[i], str[i + nextOpeningBracketIndFromI]);
