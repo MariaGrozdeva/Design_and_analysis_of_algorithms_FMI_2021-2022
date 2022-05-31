@@ -1,6 +1,3 @@
-# Database management system, DBMS
-[DBMS](https://docs.google.com/document/d/1dewJRqBfTZ530a4nW3-tRI5Sv51ywZXFNvEgZHvRsMk/edit)  
-
 # Долни граници
 ## Доказателство за долна граница чрез дърво за вземане на решения (decision tree), чрез "игра срещу противник" (adversary argument) и чрез редукция.
 
