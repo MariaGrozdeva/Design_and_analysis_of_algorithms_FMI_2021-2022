@@ -1,4 +1,4 @@
-## Intrinsics
+# Intrinsics
 Intrinsics are assembly-coded functions that allow you to use C++ function calls and variables in place of assembly instructions.
 Intrinsics are expanded inline eliminating function call overhead. Providing the same benefit as using inline assembly, intrinsics improve code readability,
 assist instruction scheduling, and help reduce debugging.
