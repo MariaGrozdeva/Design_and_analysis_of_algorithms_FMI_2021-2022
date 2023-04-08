@@ -10,4 +10,4 @@ In the solution, I use [**Advanced Vector Extensions (AVX)**](https://en.wikiped
 Here you can see the results of the comparisons I've done between ordinary Binary search and AVX Binary search.  
 There are seven different tests with much various data executed repeatedly.  
 
-![alt_text]()
+![alt_text](https://github.com/MariaGrozdeva/Design_and_analysis_of_algorithms_FMI_2021-2022/blob/main/Intel%20intrinsics%20-%20BS%20optimization/Tests.png)
