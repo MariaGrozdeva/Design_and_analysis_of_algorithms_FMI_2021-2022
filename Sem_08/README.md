@@ -57,3 +57,22 @@ A = { 2, 3, 5 };
 B = 9:  
 
 ![alt_text](https://i.ibb.co/tLGmKLS/DP-2.png)
+
+### Задача 5:
+Да се напише функция **coinChange**, която приема два параметъра – масив от номинали и стойност. Функцията трябва да върне броя начини, по които можем да получим дадената стойност, използвайки наличните номинали от масива.  
+
+**Примери:**  
+```js
+const denominations = [1, 5, 10, 25]
+
+coinChange(denominations, 1) // 1
+coinChange(denominations, 2) // 1
+coinChange(denominations, 5) // 2
+coinChange(denominations, 10) // 4
+coinChange(denominations, 25) // 13
+coinChange(denominations, 45) // 39
+coinChange(denominations, 100) // 242
+coinChange(denominations, 145) // 622
+coinChange(denominations, 1451) // 425663
+coinChange(denominations, 14511) // 409222339
+```
