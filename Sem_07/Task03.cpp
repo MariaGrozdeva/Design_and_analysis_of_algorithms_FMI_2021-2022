@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <climits>
 
-size_t getMinimumOperations(size_t n)
+unsigned getMinimumOperations(unsigned n)
 {
-	std::vector<size_t> minOperations(n + 1, SIZE_MAX);
+	std::vector<unsigned> minOperations(n + 1, UINT_MAX);
 
 	minOperations[1] = 0;
 	minOperations[2] = 1;
@@ -12,18 +13,10 @@ size_t getMinimumOperations(size_t n)
 
 	for (size_t i = 4; i <= n; i++)
 	{
-		size_t v1 = SIZE_MAX;
-		size_t v2 = SIZE_MAX;
-		size_t v3 = SIZE_MAX;
+		unsigned int v1 = i % 3 == 0 ? minOperations[i / 3] : UINT_MAX;
+    		unsigned int v2 = i % 2 == 0 ? minOperations[i / 2] : UINT_MAX;
+    		unsigned int v3 = minOperations[i - 1];
 
-		if (i % 3 == 0)
-			v1 = minOperations[i / 3];
-
-		if (i % 2 == 0)
-			v2 = minOperations[i / 2];
-
-		v3 = minOperations[i - 1];
-		
 		minOperations[i] = 1 + std::min({ v1, v2, v3 });
 	}
 
