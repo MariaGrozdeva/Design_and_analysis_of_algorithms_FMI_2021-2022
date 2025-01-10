@@ -61,8 +61,6 @@ void Graph::Dijkstra(size_t start, std::vector<size_t>& distances) const
 		q.pop();
 
 		size_t currentVertex = current.vertex;
-		size_t currentDist = current.distFromStart;
-
 		for (auto it = adj[currentVertex].begin(); it != adj[currentVertex].end(); ++it)
 		{
 			size_t currentSuccessor = (*it).first;
