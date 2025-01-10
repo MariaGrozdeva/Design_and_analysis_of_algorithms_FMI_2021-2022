@@ -261,5 +261,24 @@ Graph Graph::getTransposedGraph() const
 
 int main()
 {
-	
+    	Graph g(8, true);
+	g.addEdge(0, 5);
+	g.addEdge(1, 0);
+	g.addEdge(1, 3);
+	g.addEdge(2, 0);
+	g.addEdge(2, 3);
+	g.addEdge(2, 4);
+	g.addEdge(3, 7);
+	g.addEdge(4, 2);
+	g.addEdge(4, 5);
+	g.addEdge(5, 4);
+	g.addEdge(6, 1);
+	g.addEdge(6, 3);
+	g.addEdge(6, 7);
+	g.addEdge(7, 6);
+
+	std::vector<size_t> shP;
+	g.BFS(0, 7, shP);
+	for (size_t i = 0; i < shP.size(); i++)
+	        std::cout << shP[i] << " ";
 }
