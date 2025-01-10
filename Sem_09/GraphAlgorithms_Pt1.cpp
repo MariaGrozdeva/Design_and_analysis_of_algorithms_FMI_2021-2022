@@ -3,6 +3,7 @@
 #include <list>
 #include <stack>
 #include <queue>
+#include <algorithm>
 
 class Graph
 {
@@ -37,6 +38,11 @@ void Graph::BFS(size_t start, size_t end, std::vector<size_t>& shortestPath) con
 {
 	if (start >= verticesCount || end >= verticesCount)
 		throw "Invalid vertices";
+	if (start == end)
+	{
+	    	shortestPath.push_back(start);
+	    	return;
+	}
 
 	std::queue<size_t> q;
 	std::vector<size_t> prev(verticesCount);
@@ -50,26 +56,26 @@ void Graph::BFS(size_t start, size_t end, std::vector<size_t>& shortestPath) con
 		size_t current = q.front();
 		q.pop();
 
-		if (current == end)
-		{
-			while (current != start)
-			{
-				shortestPath.push_back(current);
-				current = prev[current];
-			}
-			shortestPath.push_back(start);
-
-			std::reverse(shortestPath.begin(), shortestPath.end());
-			return;
-		}
-
 		for (auto it = adj[current].begin(); it != adj[current].end(); ++it)
 		{
 			if (visited[*it])
 				continue;
+			prev[*it] = current;
+
+			if (*it == end)
+		    	{
+		        	size_t temp = *it;
+			    	while (temp != start)
+			    	{
+				    	shortestPath.push_back(temp);
+				    	temp = prev[temp];
+			    	}
+			    	shortestPath.push_back(start);
+			    	std::reverse(shortestPath.begin(), shortestPath.end());
+			    	return;
+		    	}	
 
 			q.push(*it);
-			prev[*it] = current;
 			visited[*it] = true;
 		}
 	}
